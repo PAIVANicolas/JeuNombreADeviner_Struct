@@ -13,6 +13,9 @@
 using namespace std;
 
 #include "../include/JeuNombreADeviner.h"
+#include "cstdlib"
+#include "ctime"
+
 
 int main()
 {

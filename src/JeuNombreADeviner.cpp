@@ -13,6 +13,8 @@
 #include <iostream>
 using namespace std;
 #include "../include/JeuNombreAdeviner.h"
+#include "cstdlib"
+#include "ctime"
 
 // Nom :InitJoueur
 // Rôle : Crée un joueur. Initialise toutes les informations du joueur.
@@ -23,6 +25,12 @@ using namespace std;
 
 void InitJoueur(TJoueur& joueurAcreer, string un_nom)
 {
+    joueurAcreer.nom un_nom;
+    joueurAcreer.nbPartiesGagnees = 0;
+    joueurAcreer.nbPartiesJouees =0;
+    joueurAcreer.nbTentatives =0;
+
+
     //A COMPLETER
 }
 
@@ -33,8 +41,9 @@ void InitJoueur(TJoueur& joueurAcreer, string un_nom)
 
 int TirerNombreMystere()
 {
-    //A COMPLETER
-        return -1;
+    srand (time(NULL));
+    TirerNombreMystere = (rand() %10+1)
+        return nombreAdeviner;
 }
 
 
@@ -47,9 +56,37 @@ int TirerNombreMystere()
 
 void JouerPartie(TJoueur& un_joueur, int nombreADeviner)
 {
-    //A COMPLETER
-}
+    int nombre_proproser;
+    int i;
+    i=0;
+    nombre_proproser=0;
+    while(i<4){
+        i++;
+        cout << "Choisir un nombre entre 0 et 10";
+        cin >> nombre_proproser;
 
+        if (nombre_proproser == nombreAdeviner)
+
+            cout << "Bien jouer, Tu as gagner";
+       {     un_joueur.nbPartiejouees++;
+            un_joueur.nbPartieGagnees++;
+            un_joueur.nbTentative = un_joueur.nbTentative +i;
+            i=6;
+        }
+        else if (nombre_proproser <= nombreAdeviner)
+      {
+          cout << "Plus grand";
+        }
+
+        else if (nombre_proproser >= nombreADeviner)
+        {
+            cout << "Plus petit";
+        }
+}
+        if (i==4)
+            cout << "Dommage... Tu as perdu :(";
+            un_joueur.nbPartiesJouees++;
+            un_joueur.nbTentatives = un_joueur.nbTentatives = 4;
 
 // Nom : MajResultatsJoueur
 // Rôle : met à jour les informations du joueur passé en paramètre
@@ -57,8 +94,9 @@ void JouerPartie(TJoueur& un_joueur, int nombreADeviner)
 // Paramètres de sortie:
 // Paramètres d'entrée/sortie :
 
-void MajResultatsJoueur(TJoueur joueur, int nbEssais, bool gagne)
+void MajResultatsJoueur(TJoueur& joueur, int nbEssais, bool gagne)
 {
+
    // A COMPLETER
 }
 
