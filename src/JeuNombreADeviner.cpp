@@ -29,9 +29,6 @@ void InitJoueur(TJoueur& joueurAcreer, string un_nom)
     joueurAcreer.nbPartiesGagnees = 0;
     joueurAcreer.nbPartiesJouees =0;
     joueurAcreer.nbTentatives =0;
-
-
-    //A COMPLETER
 }
 
 
@@ -96,8 +93,9 @@ void JouerPartie(TJoueur& un_joueur, int nombreADeviner)
 
 void MajResultatsJoueur(TJoueur& joueur, int nbEssais, bool gagne)
 {
-
-   // A COMPLETER
+    un_joueur.nbPartiesJouees++;
+    un_joueur.nbTentatives = nbEssais + un_joueur.nbTentatives;
+    if (gagne==true) un_joueur.nbPartiesGagnees++;
 }
 
 // Nom : ResultatsJoueur
