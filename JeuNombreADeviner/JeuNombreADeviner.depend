@@ -21,3 +21,18 @@
 	<iostream>
 	"../include/JeuNombreADeviner.h"
 
+1612806322 source:e:\lycée\l'institut limayrac\1er sn-ir\informatique et réseaux\mpp\c++\tp c++\gitprojet\mini-projet\jeunombreadeviner_struct\src\mainjeunombreadeviner.cpp
+	<iostream>
+	"../include/JeuNombreADeviner.h"
+	"cstdlib"
+	"ctime"
+
+1612804840 e:\lycée\l'institut limayrac\1er sn-ir\informatique et réseaux\mpp\c++\tp c++\gitprojet\mini-projet\jeunombreadeviner_struct\include\jeunombreadeviner.h
+	<string>
+
+1612806312 source:e:\lycée\l'institut limayrac\1er sn-ir\informatique et réseaux\mpp\c++\tp c++\gitprojet\mini-projet\jeunombreadeviner_struct\src\jeunombreadeviner.cpp
+	<iostream>
+	"../include/JeuNombreAdeviner.h"
+	<cstdlib>
+	<ctime>
+
