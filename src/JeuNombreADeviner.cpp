@@ -2,7 +2,7 @@
 // Nom du projet: Jeu du nombre à deviner
 // Nom du fichier: JeuNombreADeviner.cpp
 // Version : 1.0
-// Nom du programmeur: MP Pinaud
+// Nom du programmeur: Nicolas PAIVA
 // Date de création : 25/01/2021
 // Rôle du fichier: Contient le code des fonctions du jeu
 // Nom des composants utilises: JeuNombreADeviner.h
@@ -13,8 +13,8 @@
 #include <iostream>
 using namespace std;
 #include "../include/JeuNombreAdeviner.h"
-#include "cstdlib"
-#include "ctime"
+#include <cstdlib>
+#include <ctime>
 
 // Nom :InitJoueur
 // Rôle : Crée un joueur. Initialise toutes les informations du joueur.
@@ -29,6 +29,7 @@ void InitJoueur(TJoueur& joueurAcreer, string un_nom)
     joueurAcreer.nbPartiesGagnees = 0;
     joueurAcreer.nbPartiesJouees =0;
     joueurAcreer.nbTentatives =0;
+    joueurAcreer.nbPartiesPerdues = 0;
 }
 
 
@@ -38,9 +39,9 @@ void InitJoueur(TJoueur& joueurAcreer, string un_nom)
 
 int TirerNombreMystere()
 {
-    srand (time(NULL));
-    TirerNombreMystere = (rand() %10+1)
-        return nombreAdeviner;
+   srand((int)time(0));
+    int nombreADeviner = (rand() % 10+1);
+	return nombreADeviner;
 }
 
 
@@ -57,33 +58,36 @@ void JouerPartie(TJoueur& un_joueur, int nombreADeviner)
     int i;
     i=0;
     nombre_proproser=0;
-    while(i<4){
+    while(i<4)
+        {
         i++;
         cout << "Choisir un nombre entre 0 et 10";
         cin >> nombre_proproser;
-
         if (nombre_proproser == nombreAdeviner)
+        {
 
             cout << "Bien jouer, Tu as gagner";
-       {     un_joueur.nbPartiejouees++;
-            un_joueur.nbPartieGagnees++;
-            un_joueur.nbTentative = un_joueur.nbTentative +i;
+            MajResultatsJoueur(un_joueur, i, true);
             i=6;
         }
         else if (nombre_proproser <= nombreAdeviner)
-      {
+        {
           cout << "Plus grand";
+          i++;
         }
 
         else if (nombre_proproser >= nombreADeviner)
         {
             cout << "Plus petit";
+            i++;
+        }
+        }
+        if (i==4)
+        {
+            cout << "Dommage... Tu as perdu :(";
+             MajResultatsJoueur(un_joueur, 4, false);
         }
 }
-        if (i==4)
-            cout << "Dommage... Tu as perdu :(";
-            un_joueur.nbPartiesJouees++;
-            un_joueur.nbTentatives = un_joueur.nbTentatives = 4;
 
 // Nom : MajResultatsJoueur
 // Rôle : met à jour les informations du joueur passé en paramètre
@@ -108,7 +112,9 @@ void MajResultatsJoueur(TJoueur& joueur, int nbEssais, bool gagne)
 
 void ResultatsJoueur(TJoueur joueur, int& nbsucces, int& nbechec, int& nbessais)
 {
-    // A COMPLETER
+    nbsucces = joueur.nbPartiesGagnees/2;
+    nbechec = (joueur.nbPartiesJouees - joueur.nbPartiesGagnees)/2;
+    nbessais = joueur.nbTentatives/2;
 }
 
 // Nom :Nom

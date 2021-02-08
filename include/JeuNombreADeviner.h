@@ -1,8 +1,8 @@
 /*************************************************/
 // Nom du projet: Jeu du nombre à deviner
 // Nom du fichier: JeuNombreADeviner.h
-// Version : 1.0
-// Nom du programmeur: MP Pinaud
+// Version : 2.0
+// Nom du programmeur: Nicolas PAIVA
 // Date de création : 25/01/2021
 // Rôle du fichier: Contient la déclaration du type pour représenter un joueur
 // et les fonctions concernant le jeu
@@ -21,6 +21,7 @@ string nom;  // nom du joueur
 int nbPartiesJouees;
 int nbPartiesGagnees;
 int nbTentatives;
+int nbPartiesPerdue;
 } TJoueur;
 
 
@@ -48,25 +49,7 @@ int TirerNombreMystere();
 
 void JouerPartie (TJoueur &un_joueur, int nombreADeviner);
 
-    int nombre_propre;
-    int i;
-    i=0;
-    nombre_propre=0;
-    while(i<5){
-        cout << "Choisir un nombre entre 0 et 10";
-        cin >> nombre_propre;
-        if nombre_propre <= nombreAdeviner
-      {
 
-        if (nombre_propre == nombreAdeviner)
-
-            cout << "Tu as gagner";
-       {     un_joueur.nbPartiejouees++;
-            un_joueur;nbPartieGagnees++;
-            un_joueur.nbTentative = un_joueur.nbTentative +1;
-        }
-
-    }
 
 
 // Nom : MajResultatsJoueur
@@ -94,8 +77,6 @@ void ResultatsJoueur(TJoueur joueur, int &nbsucces, int &nbechec, int & nbessais
 // Valeur de retour : nom du joueur
 
 string Nom(TJoueur joueur);
-// Nom :
-// Rôle :
 
 
 
