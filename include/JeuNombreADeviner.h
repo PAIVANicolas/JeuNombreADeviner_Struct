@@ -2,12 +2,12 @@
 // Nom du projet: Jeu du nombre à deviner
 // Nom du fichier: JeuNombreADeviner.h
 // Version : 2.0
-// Nom du programmeur: Nicolas PAIVA
+// Nom du programmeur: MP PINAUD, PAIVA Nicolas
 // Date de création : 25/01/2021
 // Rôle du fichier: Contient la déclaration du type pour représenter un joueur
 // et les fonctions concernant le jeu
 // Nom des composants utilises: string
-// Historique du fichier:
+// Historique du fichier: Codage d'une structure de type TJoueur.
 /*************************************************/
 #include <string>
 using namespace std;
@@ -21,7 +21,7 @@ string nom;  // nom du joueur
 int nbPartiesJouees;
 int nbPartiesGagnees;
 int nbTentatives;
-int nbPartiesPerdue;
+int nbPartiesPerdues;
 } TJoueur;
 
 
