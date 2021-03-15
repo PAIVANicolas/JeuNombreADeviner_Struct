@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1611568901 source:c:\users\marie-pierre\documents\limayrac\cours\miniprojet\jeunombreadeviner\jeunombreadeviner\jeunombreadeviner2021\src\mainjeunombreadeviner.cpp
+	<iostream>
+	"../include/JeuNombreADeviner.h"
+
+1611569194 c:\users\marie-pierre\documents\limayrac\cours\miniprojet\jeunombreadeviner\jeunombreadeviner\jeunombreadeviner2021\include\jeunombreadeviner.h
+	<string>
+
+1611569194 source:c:\users\marie-pierre\documents\limayrac\cours\miniprojet\jeunombreadeviner\jeunombreadeviner\jeunombreadeviner2021\src\jeunombreadeviner.cpp
+	<iostream>
+	"../include/JeuNombreAdeviner.h"
+
+1611569194 source:c:\users\marie-pierre\documents\limayrac\cours\miniprojet\jeunombreadeviner\jeunombreadeviner2021\jeunombreadeviner_struct\src\jeunombreadeviner.cpp
+	<iostream>
+	"../include/JeuNombreAdeviner.h"
+
+1611569194 c:\users\marie-pierre\documents\limayrac\cours\miniprojet\jeunombreadeviner\jeunombreadeviner2021\jeunombreadeviner_struct\include\jeunombreadeviner.h
+	<string>
+
+1611570465 source:c:\users\marie-pierre\documents\limayrac\cours\miniprojet\jeunombreadeviner\jeunombreadeviner2021\jeunombreadeviner_struct\src\mainjeunombreadeviner.cpp
+	<iostream>
+	"../include/JeuNombreADeviner.h"
+
+1612806370 source:e:\lycée\l'institut limayrac\1er sn-ir\informatique et réseaux\mpp\c++\tp c++\gitprojet\mini-projet\jeunombreadeviner_struct\src\mainjeunombreadeviner.cpp
+	<iostream>
+	"../include/JeuNombreADeviner.h"
+	"cstdlib"
+	"ctime"
+
+1612804840 e:\lycée\l'institut limayrac\1er sn-ir\informatique et réseaux\mpp\c++\tp c++\gitprojet\mini-projet\jeunombreadeviner_struct\include\jeunombreadeviner.h
+	<string>
+
+1612806384 source:e:\lycée\l'institut limayrac\1er sn-ir\informatique et réseaux\mpp\c++\tp c++\gitprojet\mini-projet\jeunombreadeviner_struct\src\jeunombreadeviner.cpp
+	<iostream>
+	"../include/JeuNombreAdeviner.h"
+	<cstdlib>
+	<ctime>
+

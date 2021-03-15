@@ -2,7 +2,7 @@
 // Nom du projet: Jeu du nombre à deviner
 // Nom du fichier: Partie.h
 // Version : 1.0
-// Nom du programmeur: MP Pinaud
+// Nom du programmeur: MP Pinaud et PAIVA Nicolas
 // Date de création : 05/02/2021
 // Rôle du fichier: Contient la déclaration de attributs et méthodes de la classe qui représente une partie
 // Nom des composants utilises: string, la classe CJoueur

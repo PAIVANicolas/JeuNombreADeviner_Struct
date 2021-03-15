@@ -1,9 +1,9 @@
 /*************************************************/
-// Nom du projet: Jeu du nombre � deviner
+// Nom du projet: Jeu du nombre à deviner
 // Nom du fichier: MainJeuNombreAdeviner.cpp
 // Version : 1.0
-// Nom du programmeur: MP Pinaud
-// Date de cr�ation : 05/02/2021
+// Nom du programmeur: MP Pinaud et PAIVA Nicolas
+// Date de création : 05/02/2021
 // R�le du fichier: Contient le code jeu
 // Nom des composants utilises: CPartie
 //                              CJoueur
@@ -18,19 +18,22 @@ using namespace std;
 int main()
 {
     //Création d'un joueur
-    cout << "Vous allez jouer pour deviner un nombre secret" << endl;
-    cout << "----------------------------------------------"<< endl;
-    cout << "Veuillez entrer votre Prenom" << endl;
+
+    cout << "Vous allez jouer pour deviner un nombre secret" <<endl;
+    cout << "----------------------------------------------"<<endl;
+    cout << "Veuillez entrer votre Prenom" <<endl;
     string un_prenom;
     string un_nom;
     cin >> un_prenom;
-    cout << "Veuillez entrer votre Nom"<< endl;
+    cout << "Veuillez entrer votre Nom"<<endl;
     cin >> un_nom;
 
     // Création du joueur 1
+
     CJoueur joueur (un_nom, un_prenom);
 
     // Création du joueur 2
+
     cout << "veuillez entre le Prenom du 2eme joueur" <<endl;
     string un_prenom2;
     string un_nom2;
@@ -41,52 +44,56 @@ int main()
     CJoueur joueur2 (un_nom2, un_prenom2);
 
  /*
-void ajouterJoueur(int nombreJoueur, string nomJoueur)
-{
+    void ajouterJoueur(int nombreJoueur, string nomJoueur)
+    {
     vector <Personnage> joueurs;
     string nomPersonnage;
 
     for(int i(0); i < nombreJoueur; i++)
-    {
-        cout << "Quel est le nom du premier joueur?" << endl;
-        cin >> nomPersonnage;
-        Personnage (nomPersonnage) = joueurs[i];
+        {
+            cout << "Quel est le nom du premier joueur?" << endl;
+            cin >> nomPersonnage;
+            Personnage (nomPersonnage) = joueurs[i];
 
+        }
     }
-}*/
+*/
 
-    cout << "----------------------------------------------"<< endl;
-    cout << "Combien de parties voulez-vous jouer ?" << endl;
+    cout << "----------------------------------------------"<<endl;
+    cout << "Combien de parties voulez-vous jouer ?" <<endl;
     int nbParties;
     cin >> nbParties;
 
     for (int i = 0; i <nbParties; i++)
     {
-        cout << "----------------------------------------------"<< endl;
+        cout << "----------------------------------------------"<<endl;
         cout <<"Partie Numero : " << i+1 << endl;
-        cout << "----------------------------------------------"<< endl;
+        cout << "----------------------------------------------"<<endl;
 
         CPartie partie (0,10,4); // nombre à deviner entre 0 et 10, nombre de tentatives maximum 4
 
         partie.Jouer(joueur); // exécution d'une partie pour le joueur
-        partie.Jouer(joueur2); //ex&cution d'une partie pour le joueur
+        partie.Jouer(joueur2); //exécution d'une partie pour le joueur
     }
 
-    cout << "----------------------------------------------"<< endl;
-    cout << "Affichage des resultats du joueur "<< joueur.Prenom() <<" " << joueur.Nom() << endl;
-    cout << "----------------------------------------------"<< endl;
+    cout << "----------------------------------------------"<<endl;
+    cout << "Affichage des resultats du joueur "<< joueur.Prenom() <<" " << joueur.Nom() <<endl;
+    cout << "----------------------------------------------"<<endl;
 
-    // R�cup�ration des r�sultats du joueur 1
+    // Récupération des résultats du joueur 1
+
     int nbsucces, nbechecs, nbessais;
-    joueur.Resultats(nbsucces, nbechecs, nbessais);  // les param�tres sont pass�s par r�f�rence
+    joueur.Resultats(nbsucces, nbechecs, nbessais);  // les paramètres sont passés par référence
 
-    // Affichage des r�sultats joueur 1
+    // Affichage des résultats joueur 1
+
     cout << "Nombre de parties gagnees : " << nbsucces << endl;
     cout << "Nombre de parties perdues : " << nbechecs << endl;
     cout << "Nombre de tentatives totales : " << nbessais << endl;
     cout << "----------------------------------------------"<< endl;
 
-     // R�cup�ration des résultats du joueur 2
+     // Récupération des résultats du joueur 2
+
     int nbsucces2, nbechecs2, nbessais2;
 
     joueur2.Resultats(nbsucces2, nbechecs2, nbessais2);   // les paramétres sont passés par référence
@@ -117,6 +124,7 @@ void ajouterJoueur(int nombreJoueur, string nomJoueur)
     joueur3= new CJoueur("PAIVA","Dimitri");
 
     // Créer une partie dynamiquement (nombre à trouver entre 1 et 10, 3 essais max)
+
     CPartie * partie2 ;
     partie2 = new CPartie (1,10,3);
 

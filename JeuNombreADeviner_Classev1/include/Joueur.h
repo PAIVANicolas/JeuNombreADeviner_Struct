@@ -2,11 +2,11 @@
 // Nom du projet: Jeu du nombre à deviner
 // Nom du fichier: Joueur.h
 // Version : 1.0
-// Nom du programmeur: MP Pinaud
+// Nom du programmeur: MP Pinaud et PAIVA Nicolas
 // Date de création : 05/02/2021
 // Rôle du fichier: Contient la déclaration des attributs et méthodes de la classe qui représente un joueur
 // Nom des composants utilises: string
-// Historique du fichier:
+// Historique du fichier: 15/03/2021 :
 /*************************************************/
 #include <string>
 using namespace std;
@@ -25,8 +25,7 @@ class CJoueur {
 
     CJoueur(string un_nom, string un_premon);
 
-    ~CJoueur::CJoueur;
-    this->CJoueur;
+    ~CJoueur();
 
     // Nom : MajResultats
     // Rôle : met à jour les informations d'un joueur
@@ -50,6 +49,13 @@ class CJoueur {
     //            -le joueur dont on veut les résultats
 
     void Resultats(int &nbsucces, int &nbechec, int & nbessais);
+
+
+    // Nom :Prenom
+    // Rôle : retourne le prenom d'un joueur
+    // Entrée: le joueur dont on veut le prenom
+    // Valeur de retour : prenom du joueur
+    // Entrée : le joueur dont on veut le prenom
 
     string Prenom();
 

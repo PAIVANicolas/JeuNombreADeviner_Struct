@@ -2,7 +2,7 @@
 // Nom du projet: Jeu du nombre à deviner
 // Nom du fichier: Partie.cpp
 // Version : 1.0
-// Nom du programmeur: MP Pinaud
+// Nom du programmeur: MP Pinaud et PAIVA Nicolas
 // Date de création : 05/02/2021
 // Rôle du fichier: Contient le code des méthodes d'une partie
 // Nom des composants utilises: CJoueur
